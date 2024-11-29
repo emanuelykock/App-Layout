@@ -1,16 +1,38 @@
-# myapp
+# App Layout.
+ 
+*Sobre o Projeto*
+Este é um aplicativo simples desenvolvido em Flutter como parte da Atividade do Módulo 2 do Curso Talento Tech. O objetivo do projeto é demonstrar a criação de layouts utilizando widgets básicos do Flutter, aplicando conceitos de Material Design e explorando a personalização de temas, estruturas de colunas e linhas, e containers com estilos variados.
 
-A new Flutter project.
+*Funcionalidades*
+Título Personalizado: Mostra o nome do aplicativo na AppBar.
+Layouts Hierárquicos:
+Layout superior com texto centralizado.
+Layout central com três colunas, onde a coluna do meio contém um container estilizado com bordas arredondadas, sombra e cor de fundo.
+Layout inferior com texto centralizado.
+Botão Flutuante: Um botão no canto inferior direito com o ícone de adicionar (sem funcionalidade implementada no momento).
+Tema Personalizado: A paleta de cores foi gerada com base na cor semente #75AB9F.
 
-## Getting Started
+*Estrutura do Código*
+Main Function: Inicializa o aplicativo.
+Stateless Widget (App): Define o tema e a tela inicial.
+Stateful Widget (HomePage): Responsável por renderizar o layout principal, que utiliza:
+AppBar: Mostra o título.
+Scaffold: Estrutura principal da tela com AppBar, body e FloatingActionButton.
+Column e Row: Organizam o layout em diferentes seções.
+Container: Usado para estilizar partes do layout com bordas, sombras e cores.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+*Estrutura do Layout*
+App
+└── MaterialApp
+    └── HomePage
+        ├── AppBar
+        └── Scaffold
+            ├── Body
+            │   └── Column
+            │       ├── Container (Layout Superior)
+            │       ├── Row (Layout Central)
+            │       │   ├── Container (Esquerda)
+            │       │   ├── Container (Centro com estilo)
+            │       │   └── Container (Direita)
+            │       └── Container (Layout Inferior)
+            └── FloatingActionButton
